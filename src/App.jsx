@@ -62,7 +62,7 @@ function App() {
             <div className="w-full mb-1">
               <Input
                 label={to}
-                amount={Math.floor(convertedamount)}
+                amount={convertedamount.toFixed(2)}
                 currencyOptions={options}
                 onCurrencyChange={(currency) => setTo(currency)}
                 selectedCurrency={to}

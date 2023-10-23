@@ -3,8 +3,8 @@ import { useState } from "react";
 import "./App.css";
 import { Input } from "./components/index";
 import useCurrencyInfo from "./hooks/useCurrencyInfo";
-// import {bank} from './assets/index/bank.jpg'
-import bank from "./assets/bank.jpg";
+import { josh } from "./assets/index";
+// import bank from "./assets/bank.jpg";
 
 function App() {
   const [from, setFrom] = useState("usd");
@@ -32,9 +32,9 @@ function App() {
   // };
   return (
     <div
-      className=" w-screen  h-screen flex flex-wrap   bg-no-repeat  bg-center justify-center items-center"
+      className=" w-screen  h-screen flex flex-wrap   bg-no-repeat  bg-cover justify-center items-center"
       style={{
-        backgroundImage: `url(${bank})`,
+        backgroundImage: `url(${josh})`,
       }}
     >
       <div className="w-full">
@@ -52,7 +52,7 @@ function App() {
             </div>
             <div className="relative w-full h-0.5">
               <button
-                className="text-white border-white border-2 rounded-lg bg-blue-400 px-2 py-0.5 absolute left-1/2 -translate-x-1/2 -translate-y-1/2v
+                className="text-white border-white border-2 rounded-lg bg-[#703328] px-2 py-0.5 absolute left-1/2 -translate-x-1/2 -translate-y-1/2v
                 cursor-pointer"
                 onClick={swap}
               >
@@ -71,7 +71,7 @@ function App() {
             </div>
             <button
               type="submit"
-              className="w-full bg-blue-400 text-white px-4 py-3 rounded-lg"
+              className="w-full bg-[#703328]  text-white px-4 py-3 rounded-lg"
             >
               Convert {from.toUpperCase()} to {to.toUpperCase()}
             </button>
